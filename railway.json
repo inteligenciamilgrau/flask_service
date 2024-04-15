@@ -9,6 +9,6 @@
         "restartPolicyMaxRetries": 10
     },
     "env": {
-    "PYTHON_VERSION": "<desired_python_version>"
+    "PYTHON_VERSION": "3.10"
     }
 }
