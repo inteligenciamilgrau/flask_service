@@ -1,2 +1,9 @@
-[env]
-PYTHON_VERSION = "3.10"
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+numReplicas = 1
+sleepApplication = false
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+pkgs = ["python310"]
