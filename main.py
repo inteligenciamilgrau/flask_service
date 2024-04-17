@@ -6,6 +6,8 @@ import os
 #from dotenv import load_dotenv
 #load_dotenv()
 
+process.env.OPENAI_API_KEY
+
 search_tool = DuckDuckGoSearchRun()
 
 app = Flask(__name__)
@@ -17,7 +19,7 @@ agente1 = Agent(
             tools=[search_tool],
             allow_delegation=False,
             verbose=True,
-            llm=ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.7),
+            llm=ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.7, api_key=os.environ.get("OPENAI_API_KEY")),
         )
 
 tarefa = Task(
