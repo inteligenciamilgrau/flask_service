@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from crewai import Agent, Task, Crew
 from langchain_openai import ChatOpenAI
 from langchain_community.tools import DuckDuckGoSearchRun
@@ -41,6 +41,18 @@ def index():
 
     result = crew.kickoff()
     return jsonify({"bob": result})
+
+
+@app.route('/result')
+def result():
+    crew = Crew(
+        agents=[agente1],
+        tasks=[tarefa],
+        verbose=True,
+    )
+
+    result = crew.kickoff()
+    return render_template('result.html', result=result)
 
 
 if __name__ == '__main__':
