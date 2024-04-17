@@ -1,6 +1,7 @@
 Flask
 gunicorn
-#crewai
+crewai
 #crewai-tools
+langchain_openai
 langchain-community
 duckduckgo-search
