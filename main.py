@@ -1,8 +1,6 @@
 from flask import Flask, jsonify
 from langchain_community.tools import DuckDuckGoSearchRun, DuckDuckGoSearchResults
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
 search_tool = DuckDuckGoSearchRun()
 
