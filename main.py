@@ -6,8 +6,6 @@ import os
 #from dotenv import load_dotenv
 #load_dotenv()
 
-process.env.OPENAI_API_KEY
-
 search_tool = DuckDuckGoSearchRun()
 
 app = Flask(__name__)
