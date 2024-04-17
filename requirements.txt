@@ -7,5 +7,5 @@ MarkupSafe==1.1.1
 Werkzeug==1.0.1
 #crewai
 #crewai-tools
-langchain==0.1.16
+langchain-community
 duckduckgo-search
